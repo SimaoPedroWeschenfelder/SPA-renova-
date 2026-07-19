@@ -1,0 +1,222 @@
+.pageHeader {
+  padding-top: calc(var(--nav-height) + 1px);
+  padding-bottom: 2px;
+  background: var(--color-sand);
+  text-align: center;
+}
+
+.pageHeader p {
+  color: var(--color-ink-soft);
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+.groupSection {
+  padding-block: clamp(40px, 5.5vw, 72px);
+}
+
+.groupSection.alt {
+  background: var(--color-sand);
+}
+
+.groupHead {
+  display: grid;
+  gap: 20px 32px;
+  align-items: center;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.groupHead h2 {
+  margin-bottom: 0.25em;
+}
+
+.groupHead p {
+  color: var(--color-ink-soft);
+  max-width: 52ch;
+  margin: 0;
+}
+
+.groupImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+/* Day Spa — faixa premium escura */
+.daySpa {
+  background: linear-gradient(
+    160deg,
+    var(--color-sage-dark) 0%,
+    var(--color-emerald) 100%
+  );
+  color: var(--color-white);
+  padding-block: clamp(56px, 8vw, 100px);
+}
+
+.daySpaInner {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.daySpaImages {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.daySpaImages img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.daySpaImageSecond {
+  display: none;
+}
+
+.daySpaContent h2 {
+  color: var(--color-white);
+}
+
+.daySpaContent > p {
+  color: rgba(250, 248, 244, 0.85);
+  max-width: 46ch;
+}
+
+.daySpaList {
+  margin: 20px 0 28px;
+  display: grid;
+  gap: 10px;
+}
+
+.daySpaList li {
+  position: relative;
+  padding-left: 26px;
+  color: rgba(250, 248, 244, 0.92);
+}
+
+.daySpaList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 14px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+/* Planos */
+.planos {
+  padding-block: clamp(48px, 6.5vw, 84px);
+}
+
+.planosHead {
+  text-align: center;
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.planosHead p {
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+.planosGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.planoCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-dark);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  position: relative;
+  transition:
+    transform var(--transition-fast) var(--ease-out),
+    box-shadow var(--transition-fast) var(--ease-out);
+}
+
+.planoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.planoCard h3 {
+  margin-bottom: 0.3em;
+}
+
+.planoCard p {
+  color: var(--color-ink-soft);
+  font-size: 0.94rem;
+  margin-bottom: 14px;
+}
+
+.planoOff {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.planoLink {
+  color: var(--color-sage-dark);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.planoLink:hover {
+  color: var(--color-gold);
+}
+
+@media (min-width: 720px) {
+  .groupHead {
+    grid-template-columns: minmax(0, 380px) 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .planosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .daySpaInner {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .daySpaImages {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    align-items: end;
+  }
+
+  .daySpaImageSecond {
+    display: block;
+    aspect-ratio: 3 / 4;
+    transform: translateY(24px);
+  }
+}

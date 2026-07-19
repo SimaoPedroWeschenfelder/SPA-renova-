@@ -1,0 +1,104 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: linear-gradient(180deg, var(--color-sand) 0%, var(--color-cream) 60%);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--color-sage-dark);
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 26px;
+}
+
+.googleBtn {
+  width: 100%;
+}
+
+.reveal {
+  margin-top: 26px;
+  animation: reveal-in 480ms var(--ease-out);
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin-top: 10px;
+}
+
+.textarea,
+.input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-sand-dark);
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+  resize: vertical;
+}
+
+.textarea:focus,
+.input:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+.error {
+  color: #a1423b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.thanks {
+  color: var(--color-sage-dark);
+  font-size: 0.98rem;
+}
+
+.form .btn {
+  margin-top: 10px;
+  width: 100%;
+}

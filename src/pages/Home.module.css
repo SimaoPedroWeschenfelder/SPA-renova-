@@ -1,0 +1,236 @@
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 560px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.heroImageWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1500ms var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.heroImageActive {
+  opacity: 1;
+  animation: hero-ken-burns 8s linear forwards;
+}
+
+.heroImageActive:nth-child(even) {
+  animation-name: hero-ken-burns-reverse;
+}
+
+@keyframes hero-ken-burns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes hero-ken-burns-reverse {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(35, 40, 30, 0.15) 0%,
+    rgba(24, 28, 20, 0.35) 55%,
+    rgba(18, 22, 16, 0.82) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(56px, 9vw, 110px);
+  color: var(--color-white);
+  max-width: 720px;
+}
+
+.heroEyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  opacity: 0;
+  animation: hero-rise 700ms var(--ease-out) 150ms forwards;
+}
+
+.heroTitle {
+  font-size: clamp(2.7rem, 5.6vw, 4.6rem);
+  letter-spacing: -0.015em;
+  color: var(--color-white);
+  margin-bottom: 0.35em;
+  opacity: 0;
+  animation: hero-rise 800ms var(--ease-out) 320ms forwards;
+}
+
+.heroTagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  color: var(--color-sand);
+  margin-bottom: 1.6em;
+  opacity: 0;
+  animation: hero-rise 800ms var(--ease-out) 480ms forwards;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  opacity: 0;
+  animation: hero-rise 800ms var(--ease-out) 640ms forwards;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroImage,
+  .heroImageActive {
+    animation: none;
+    transform: none;
+  }
+
+  .heroEyebrow,
+  .heroTitle,
+  .heroTagline,
+  .heroActions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.intro {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.introImage img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.introText p {
+  color: var(--color-ink-soft);
+}
+
+.highlights {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.highlightCard {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-fast) var(--ease-out),
+    box-shadow var(--transition-fast) var(--ease-out);
+}
+
+.highlightCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.highlightCard img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.highlightBody {
+  padding: 22px 24px 26px;
+}
+
+.highlightBody p {
+  color: var(--color-ink-soft);
+  font-size: 0.94rem;
+}
+
+.highlightLink {
+  color: var(--color-sage-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ctaFinal {
+  background: var(--color-sage-dark);
+  color: var(--color-white);
+  padding-block: clamp(56px, 8vw, 96px);
+}
+
+.ctaFinalInner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.ctaFinal h2 {
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.ctaFinal p {
+  color: var(--color-sage-light);
+  margin-bottom: 0;
+}
+
+@media (min-width: 720px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

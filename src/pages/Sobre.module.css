@@ -1,0 +1,44 @@
+.pageHeader {
+  padding-top: calc(var(--nav-height) + 1px);
+  padding-bottom: 1px;
+  background: var(--color-sand);
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.image {
+  max-width: 440px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.image img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.text p {
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 760px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reverse .image {
+    order: 2;
+  }
+
+  .reverse .text {
+    order: 1;
+  }
+}

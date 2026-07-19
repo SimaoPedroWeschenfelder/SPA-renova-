@@ -1,0 +1,6 @@
+# PLACEHOLDER — se o domínio final for outro, atualizar aqui e em src/lib/constants.js (SITE_URL) e sitemap.xml
+User-agent: *
+Allow: /
+Disallow: /avaliar
+
+Sitemap: https://spacorenova.com.br/sitemap.xml
