@@ -83,14 +83,14 @@ export default function Avaliar() {
   return (
     <div className={styles.page}>
       <Seo
-        title="Avalie o Spaço Renova"
-        description="Deixe sua avaliação e sugestões para o Spaço Renova."
+        title="Avalie o SPAçoRENOVA"
+        description="Deixe sua avaliação e sugestões para o SPAçoRENOVA."
         path="/avaliar"
         noindex
       />
 
       <div className={styles.card}>
-        <p className={styles.logo}>Spaço Renova</p>
+        <p className={styles.logo}>SPAçoRENOVA</p>
         <h1 className={styles.title}>Sua opinião renova a gente</h1>
 
         <a

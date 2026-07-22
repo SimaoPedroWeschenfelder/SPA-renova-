@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-label="Vale-presente do SPAçoRENOVA">
+  <defs>
+    <linearGradient id="sage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7A8B77"/>
+      <stop offset="100%" stop-color="#5F7060"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C9A96A"/>
+      <stop offset="50%" stop-color="#E3CD9B"/>
+      <stop offset="100%" stop-color="#C9A96A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1000" height="620" rx="28" fill="url(#sage)"/>
+
+  <!-- textura sutil: arcos concentricos no canto -->
+  <g fill="none" stroke="#FAF8F4" stroke-opacity="0.07" stroke-width="1.5">
+    <circle cx="880" cy="560" r="130"/>
+    <circle cx="880" cy="560" r="180"/>
+    <circle cx="880" cy="560" r="230"/>
+  </g>
+
+  <!-- moldura dourada -->
+  <rect x="34" y="34" width="932" height="552" rx="14" fill="none" stroke="url(#gold)" stroke-width="1.4" stroke-opacity="0.85"/>
+
+  <!-- ornamento botanico: folha de eucalipto em traco fino -->
+  <g stroke="url(#gold)" fill="none" stroke-width="1.6" stroke-linecap="round" opacity="0.9">
+    <path d="M500 96 C500 118 500 132 500 150"/>
+    <path d="M500 150 C476 146 462 132 458 112 C480 110 496 126 500 150 Z"/>
+    <path d="M500 150 C524 146 538 132 542 112 C520 110 504 126 500 150 Z"/>
+    <path d="M500 150 C480 168 472 186 474 208 C494 200 502 178 500 150 Z"/>
+    <path d="M500 150 C520 168 528 186 526 208 C506 200 498 178 500 150 Z"/>
+  </g>
+
+  <!-- titulo -->
+  <text x="500" y="286" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="76" font-weight="600" fill="#FAF8F4" letter-spacing="10">VALE-PRESENTE</text>
+
+  <!-- filete separador -->
+  <line x1="380" y1="322" x2="620" y2="322" stroke="url(#gold)" stroke-width="1.2"/>
+
+  <!-- subtitulo -->
+  <text x="500" y="368" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="30" font-style="italic" fill="#FAF8F4" fill-opacity="0.92" letter-spacing="0.5">Para aquela pessoa que te faz bem.</text>
+
+  <!-- campos Para / De -->
+  <g font-family="'Jost', 'Helvetica Neue', Arial, sans-serif" font-size="16" letter-spacing="3" fill="#C9A96A">
+    <text x="150" y="452">PARA</text>
+    <text x="560" y="452">DE</text>
+  </g>
+  <line x1="150" y1="474" x2="470" y2="474" stroke="#FAF8F4" stroke-opacity="0.42" stroke-width="1"/>
+  <line x1="560" y1="474" x2="850" y2="474" stroke="#FAF8F4" stroke-opacity="0.42" stroke-width="1"/>
+
+  <!-- rodape -->
+  <text x="500" y="546" text-anchor="middle" font-family="'Jost', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#FAF8F4" fill-opacity="0.7" letter-spacing="2.4">SPAçoRENOVA · HOTEL MERCURE FLORIANÓPOLIS</text>
+</svg>

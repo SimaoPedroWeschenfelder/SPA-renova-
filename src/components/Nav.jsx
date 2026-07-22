@@ -31,7 +31,7 @@ export default function Nav() {
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${overHero ? styles.light : ''} ${open ? styles.menuOpen : ''}`}>
       <div className={`container ${styles.inner}`}>
         <NavLink to="/" className={styles.brand} onClick={() => setOpen(false)}>
-          Spaço Renova
+          SPAçoRENOVA
         </NavLink>
 
         <nav className={styles.links} aria-label="Navegação principal">
@@ -48,7 +48,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no Spaço Renova.')}
+          href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no SPAçoRENOVA.')}
           target="_blank"
           rel="noopener noreferrer"
           className={`btn btn-gold ${styles.cta}`}
@@ -83,7 +83,7 @@ export default function Nav() {
             </NavLink>
           ))}
           <a
-            href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no Spaço Renova.')}
+            href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no SPAçoRENOVA.')}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-gold"

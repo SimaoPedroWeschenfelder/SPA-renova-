@@ -4,7 +4,9 @@ import Seo from "../components/Seo";
 import Reveal from "../components/Reveal";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import { buildWhatsAppLink } from "../lib/whatsapp";
+import { GENERIC_VOUCHER_MESSAGE } from "../data/vouchers";
 import { ADDRESS } from "../lib/constants";
+import valePresente from "../assets/vale-presente.svg";
 import heroSala from "../assets/fundo.webp";
 import heroFundo2 from "../assets/fundo2.webp";
 import heroFundo3 from "../assets/fundo3.webp";
@@ -18,7 +20,7 @@ import styles from "./Home.module.css";
 const heroSlides = [
   {
     src: heroSala,
-    alt: "Sala de massagem do Spaço Renova, com parede curva iluminada em LED",
+    alt: "Sala de massagem do SPAçoRENOVA, com parede curva iluminada em LED",
   },
   { src: heroFundo2, alt: "" },
   { src: heroFundo3, alt: "" },
@@ -70,7 +72,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Spaço Renova — Spa, Massagens e Bem-Estar em Florianópolis | Hotel Mercure"
+        title="SPAçoRENOVA — Spa, Massagens e Bem-Estar em Florianópolis | Hotel Mercure"
         description="Spa premium dentro do Hotel Mercure Florianópolis. Massagens, tratamentos faciais e day spa em Itacorubi. Agende pelo WhatsApp."
         path="/"
         ogImage={heroSala}
@@ -97,7 +99,7 @@ export default function Home() {
         </div>
 
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.heroEyebrow}>Spaço Renova · Saúde e Bem-Estar</p>
+          <p className={styles.heroEyebrow}>SPAçoRENOVA · Saúde e Bem-Estar</p>
           <h1 className={styles.heroTitle}>Seu momento de pausa começa aqui</h1>
           <p className={styles.heroTagline}>
             Renove seu corpo · Restaure sua mente · Reequilibre sua essência
@@ -106,7 +108,7 @@ export default function Home() {
           <div className={styles.heroActions}>
             <a
               href={buildWhatsAppLink(
-                "Olá! Gostaria de agendar um horário no Spaço Renova.",
+                "Olá! Gostaria de agendar um horário no SPAçoRENOVA.",
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -127,7 +129,7 @@ export default function Home() {
             <Reveal as="div" className={styles.introImage}>
               <img
                 src={logoParede}
-                alt="Logo do Spaço Renova em dourado sobre parede de madeira"
+                alt="Logo do SPAçoRENOVA em dourado sobre parede de madeira"
                 width={1920}
                 height={400}
                 loading="lazy"
@@ -138,7 +140,7 @@ export default function Home() {
               <span className="eyebrow">O Spaço</span>
               <h2>Um refúgio dentro do Mercure Florianópolis</h2>
               <p>
-                O Spaço Renova nasceu para dar aos hóspedes do hotel e a
+                O SPAçoRENOVA nasceu para dar aos hóspedes do hotel e a
                 Florianópolis um lugar de cuidado real — sem pressa, sem
                 excesso. Cada sala foi pensada para o silêncio, e cada
                 atendimento é conduzido por terapeutas com formação sólida em
@@ -185,6 +187,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.vale}>
+        <div className={`container ${styles.valeInner}`}>
+          <Reveal as="div" className={styles.valeArtWrap}>
+            <img
+              src={valePresente}
+              alt="Vale-presente do SPAçoRENOVA"
+              width={1000}
+              height={620}
+              loading="lazy"
+              decoding="async"
+              className={styles.voucherArt}
+            />
+          </Reveal>
+
+          <Reveal as="div" delay={120} className={styles.valeContent}>
+            <span className="eyebrow">Presenteie</span>
+            <h2>Um presente que é uma pausa</h2>
+            <p>
+              Um dia de descanso para aquela pessoa que te faz bem. Vale para
+              aniversário, Dia das Mães ou simplesmente para agradecer. Quem
+              recebe escolhe entre uma sessão ou o Day Spa completo e agenda no
+              tempo dela.
+            </p>
+            <div className={styles.valeActions}>
+              <a
+                href={buildWhatsAppLink(GENERIC_VOUCHER_MESSAGE)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold"
+              >
+                Quero presentear
+              </a>
+              <Link to="/servicos#vale-presente" className="btn btn-outline">
+                Ver opções
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <Reveal as="div" className="section-heading">
@@ -203,7 +245,7 @@ export default function Home() {
           </p>
           <a
             href={buildWhatsAppLink(
-              "Olá! Gostaria de agendar um horário no Spaço Renova.",
+              "Olá! Gostaria de agendar um horário no SPAçoRENOVA.",
             )}
             target="_blank"
             rel="noopener noreferrer"

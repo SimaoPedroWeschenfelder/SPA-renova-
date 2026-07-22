@@ -11,8 +11,8 @@ export default function Contato() {
   return (
     <>
       <Seo
-        title="Contato — Spaço Renova | Hotel Mercure Florianópolis"
-        description="Agende pelo WhatsApp, veja o endereço e como chegar ao Spaço Renova, dentro do Hotel Mercure Florianópolis, em Itacorubi."
+        title="Contato — SPAçoRENOVA | Hotel Mercure Florianópolis"
+        description="Agende pelo WhatsApp, veja o endereço e como chegar ao SPAçoRENOVA, dentro do Hotel Mercure Florianópolis, em Itacorubi."
         path="/contato"
       />
 
@@ -36,7 +36,7 @@ export default function Contato() {
             <div>
               <span className="eyebrow">WhatsApp</span>
               <p>
-                <a href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no Spaço Renova.')} target="_blank" rel="noopener noreferrer">
+                <a href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no SPAçoRENOVA.')} target="_blank" rel="noopener noreferrer">
                   {WHATSAPP_DISPLAY}
                 </a>
               </p>
@@ -53,7 +53,7 @@ export default function Contato() {
 
             <div>
               <span className="eyebrow">Como chegar</span>
-              <p>O Spaço Renova fica dentro do Hotel Mercure, no Itacorubi — entre a UDESC e o Jardim Botânico, com acesso rápido pela SC-404.</p>
+              <p>O SPAçoRENOVA fica dentro do Hotel Mercure, no Itacorubi — entre a UDESC e o Jardim Botânico, com acesso rápido pela SC-404.</p>
               <p>Ao chegar, é só se identificar na recepção do hotel e pedir pelo spa.</p>
             </div>
 
@@ -63,7 +63,7 @@ export default function Contato() {
             </div>
 
             <a
-              href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no Spaço Renova.')}
+              href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no SPAçoRENOVA.')}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
@@ -75,7 +75,7 @@ export default function Contato() {
           <Reveal as="div" delay={100} className={styles.mapWrap}>
             <iframe
               src={MAPS_EMBED_SRC}
-              title="Localização do Spaço Renova no Hotel Mercure Florianópolis"
+              title="Localização do SPAçoRENOVA no Hotel Mercure Florianópolis"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className={styles.map}

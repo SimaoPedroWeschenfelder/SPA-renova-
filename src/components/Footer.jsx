@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div>
-          <p className={styles.brand}>Spaço Renova</p>
+          <p className={styles.brand}>SPAçoRENOVA</p>
           <p className={styles.tagline}>Renove seu corpo · Restaure sua mente · Reequilibre sua essência</p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
           <p className={styles.heading}>Contato</p>
           <ul className={styles.list}>
             <li>
-              <a href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no Spaço Renova.')} target="_blank" rel="noopener noreferrer">
+              <a href={buildWhatsAppLink('Olá! Gostaria de agendar um horário no SPAçoRENOVA.')} target="_blank" rel="noopener noreferrer">
                 WhatsApp: {WHATSAPP_DISPLAY}
               </a>
             </li>
@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
 
       <div className={`container ${styles.bottom}`}>
-        <p>© {year} Spaço Renova — Saúde e Bem-Estar. Todos os direitos reservados.</p>
+        <p>© {year} SPAçoRENOVA — Saúde e Bem-Estar. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

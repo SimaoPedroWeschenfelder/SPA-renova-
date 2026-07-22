@@ -9,14 +9,14 @@ export default function Sobre() {
   return (
     <>
       <Seo
-        title="Sobre — Renata Weschenfelder e o Spaço Renova | Florianópolis"
-        description="Conheça a história do Spaço Renova e a trajetória de Renata Weschenfelder, terapeuta corporal com formação internacional em Nova Zelândia, Havaí e Bali."
+        title="Sobre — Renata Weschenfelder e o SPAçoRENOVA | Florianópolis"
+        description="Conheça a história do SPAçoRENOVA e a trajetória de Renata Weschenfelder, terapeuta corporal com formação internacional em Nova Zelândia, Havaí e Bali."
         path="/sobre"
       />
 
       <header className={styles.pageHeader}>
         <div className="container">
-          <h1>Sobre o Spaço Renova</h1>
+          <h1>Sobre o SPAçoRENOVA</h1>
         </div>
       </header>
 
@@ -26,7 +26,7 @@ export default function Sobre() {
             <Reveal as="div" className={styles.image}>
               <img
                 src={cliente}
-                alt="Cliente sentada na maca de massagem, vestindo roupão branco, dentro do Spaço Renova"
+                alt="Cliente sentada na maca de massagem, vestindo roupão branco, dentro do SPAçoRENOVA"
                 width={1280}
                 height={700}
                 loading="lazy"
@@ -39,7 +39,7 @@ export default function Sobre() {
                 Cuidado com raiz internacional, dentro do Mercure Florianópolis
               </h2>
               <p>
-                O Spaço Renova funciona dentro do Hotel Mercure Florianópolis,
+                O SPAçoRENOVA funciona dentro do Hotel Mercure Florianópolis,
                 em Itacorubi, recebendo hóspedes do hotel e também quem mora na
                 cidade. A proposta é simples: um espaço tranquilo, discreto,
                 onde cada atendimento acontece no ritmo de quem está sendo
@@ -75,7 +75,7 @@ export default function Sobre() {
                 Terapeuta corporal e graduanda em Fisioterapia, Renata construiu
                 sua formação viajando: passou por Nova Zelândia, Havaí e Bali
                 estudando diferentes tradições de terapia corporal antes de
-                trazer esse repertório para o Spaço Renova.
+                trazer esse repertório para o SPAçoRENOVA.
               </p>
               <p>
                 É ela quem define o padrão de cada atendimento — técnico, mas
@@ -84,7 +84,7 @@ export default function Sobre() {
               </p>
               <a
                 href={buildWhatsAppLink(
-                  "Olá! Gostaria de agendar um horário com a Renata no Spaço Renova.",
+                  "Olá! Gostaria de agendar um horário com a Renata no SPAçoRENOVA.",
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -7,7 +7,7 @@ export const reviews = [
     initials: 'NC',
     rating: 5,
     // PLACEHOLDER — substituir por avaliações reais
-    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no Spaço Renova.',
+    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no SPAçoRENOVA.',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const reviews = [
     initials: 'NC',
     rating: 5,
     // PLACEHOLDER — substituir por avaliações reais
-    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no Spaço Renova.',
+    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no SPAçoRENOVA.',
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const reviews = [
     initials: 'NC',
     rating: 5,
     // PLACEHOLDER — substituir por avaliações reais
-    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no Spaço Renova.',
+    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no SPAçoRENOVA.',
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const reviews = [
     initials: 'NC',
     rating: 5,
     // PLACEHOLDER — substituir por avaliações reais
-    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no Spaço Renova.',
+    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no SPAçoRENOVA.',
   },
   {
     id: 5,
@@ -39,6 +39,6 @@ export const reviews = [
     initials: 'NC',
     rating: 5,
     // PLACEHOLDER — substituir por avaliações reais
-    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no Spaço Renova.',
+    text: 'PLACEHOLDER — trocar por um trecho real de avaliação do Google sobre a experiência no SPAçoRENOVA.',
   },
 ];

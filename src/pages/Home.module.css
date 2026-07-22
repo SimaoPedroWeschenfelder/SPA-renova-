@@ -199,6 +199,66 @@
   font-weight: 500;
 }
 
+/* Vale-Presente */
+.vale {
+  background: var(--color-sand);
+  border-top: 1px solid var(--color-sand-dark);
+  padding-block: clamp(56px, 8vw, 96px);
+  /* a arte é rotacionada em CSS — evita barra de rolagem horizontal */
+  overflow-x: clip;
+}
+
+.valeInner {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.valeArtWrap {
+  padding-inline: 12px;
+}
+
+.voucherArt {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  transform: rotate(-3.5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  transition: transform 400ms var(--ease-out);
+}
+
+.voucherArt:hover {
+  transform: rotate(-1deg) translateY(-4px);
+}
+
+.valeContent p {
+  color: var(--color-ink-soft);
+  max-width: 46ch;
+}
+
+.valeActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+@media (max-width: 599px) {
+  .voucherArt {
+    transform: rotate(-2deg);
+  }
+
+  .voucherArt:hover {
+    transform: rotate(-1deg) translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voucherArt {
+    transition: none;
+  }
+}
+
 .ctaFinal {
   background: var(--color-sage-dark);
   color: var(--color-white);
@@ -225,6 +285,10 @@
 
 @media (min-width: 720px) {
   .intro {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .valeInner {
     grid-template-columns: 1fr 1fr;
   }
 }

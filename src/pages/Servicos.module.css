@@ -116,6 +116,155 @@
   background: var(--color-gold);
 }
 
+/* Vale-Presente */
+.vale {
+  padding-block: clamp(48px, 6.5vw, 84px);
+  /* a arte é rotacionada em CSS — evita barra de rolagem horizontal */
+  overflow-x: clip;
+}
+
+.valeArtWrap {
+  max-width: 520px;
+  margin: 0 auto clamp(36px, 5vw, 56px);
+  padding-inline: 12px;
+}
+
+.voucherArt {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  transform: rotate(-3.5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  transition: transform 400ms var(--ease-out);
+}
+
+.voucherArt:hover {
+  transform: rotate(-1deg) translateY(-4px);
+}
+
+.valeFamilia {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.valeFamiliaTitulo {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--color-ink-soft);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.9em;
+}
+
+.valeGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.valeCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-sand-dark);
+  border-radius: var(--radius-lg);
+  padding: 24px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--transition-fast) var(--ease-out),
+    box-shadow var(--transition-fast) var(--ease-out);
+}
+
+.valeCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.valeCardTitulo {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+  line-height: 1.15;
+  color: var(--color-sage-dark);
+  margin: 0 0 0.35em;
+}
+
+.valeCardTexto {
+  color: var(--color-ink-soft);
+  font-size: 0.94rem;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.valeCardLink {
+  align-self: flex-start;
+  color: var(--color-sage-dark);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.valeCardLink:hover {
+  color: var(--color-gold);
+}
+
+.valeComoFunciona {
+  background: var(--color-sand);
+  border-radius: var(--radius-lg);
+  padding: clamp(26px, 4vw, 38px);
+  margin-top: clamp(8px, 2vw, 16px);
+}
+
+.valeComoFunciona h3 {
+  margin-bottom: 0.7em;
+}
+
+.valePassos {
+  display: grid;
+  gap: 16px;
+  counter-reset: passo;
+}
+
+.valePassos li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--color-ink-soft);
+}
+
+.valePassoNumero {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sage-dark);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.valeLegal {
+  margin: 20px 0 0;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  opacity: 0.75;
+  max-width: 62ch;
+}
+
+@media (max-width: 599px) {
+  .voucherArt {
+    transform: rotate(-2deg);
+  }
+
+  .voucherArt:hover {
+    transform: rotate(-1deg) translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voucherArt {
+    transition: none;
+  }
+}
+
 /* Planos */
 .planos {
   padding-block: clamp(48px, 6.5vw, 84px);
@@ -192,6 +341,10 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valeGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .planosGrid {

@@ -3,7 +3,7 @@ import { INSTAGRAM_URL, SITE_URL, WHATSAPP_DISPLAY } from '../lib/constants';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'DaySpa',
-  name: 'Spaço Renova — Saúde e Bem-Estar',
+  name: 'SPAçoRENOVA — Saúde e Bem-Estar',
   url: SITE_URL,
   telephone: WHATSAPP_DISPLAY,
   priceRange: 'R$$',

@@ -2,12 +2,20 @@ import Seo from "../components/Seo";
 import Reveal from "../components/Reveal";
 import ServiceCard from "../components/ServiceCard";
 import { serviceGroups } from "../data/services";
-import { serviceWhatsAppLink } from "../lib/whatsapp";
+import { voucherOptions, VOUCHER_VALIDADE_MESES } from "../data/vouchers";
+import { serviceWhatsAppLink, buildWhatsAppLink } from "../lib/whatsapp";
 import pedrasQuentes1 from "../assets/pedras-quentes-1.jpg";
 import facial1 from "../assets/facial-1.jpg";
 import chaDetalhe from "../assets/escalda-pes-sais.webp";
 import escaldaPesCha from "../assets/escalda-pes-cha.webp";
+import valePresente from "../assets/vale-presente.svg";
 import styles from "./Servicos.module.css";
+
+const voucherSteps = [
+  "Você escolhe o vale e fala com a gente no WhatsApp.",
+  "A gente confirma o pagamento e emite o vale com o nome de quem vai receber.",
+  "Você entrega o vale (digital ou impresso) e a pessoa agenda quando quiser.",
+];
 
 const groupMeta = {
   massagens: {
@@ -43,8 +51,8 @@ export default function Servicos() {
   return (
     <>
       <Seo
-        title="Serviços — Massagens, Faciais e Day Spa | Spaço Renova"
-        description="Conheça as massagens, tratamentos faciais, day spa e planos do Spaço Renova, dentro do Hotel Mercure Florianópolis. Preços e agendamento pelo WhatsApp."
+        title="Serviços — Massagens, Faciais e Day Spa | SPAçoRENOVA"
+        description="Conheça as massagens, tratamentos faciais, day spa, vale-presente e planos do SPAçoRENOVA, dentro do Hotel Mercure Florianópolis. Preços e agendamento pelo WhatsApp."
         path="/servicos"
       />
 
@@ -136,6 +144,84 @@ export default function Servicos() {
               Consultar valores no WhatsApp
             </a>
           </Reveal>
+        </div>
+      </section>
+
+      <section id="vale-presente" className={styles.vale}>
+        <div className="container">
+          <Reveal as="div" className="section-heading">
+            <span className="eyebrow">Presenteie</span>
+            <h2>Vale-Presente</h2>
+            <p>
+              Presentear alguém com uma pausa de verdade. A pessoa escolhe o
+              tratamento e agenda quando for melhor pra ela.
+            </p>
+          </Reveal>
+
+          <Reveal as="div" delay={80} className={styles.valeArtWrap}>
+            <img
+              src={valePresente}
+              alt="Vale-presente do SPAçoRENOVA"
+              width={1000}
+              height={620}
+              loading="lazy"
+              decoding="async"
+              className={styles.voucherArt}
+            />
+          </Reveal>
+
+          {[
+            { tipo: "experiencia", titulo: "Por experiência" },
+            { tipo: "valor", titulo: "Por valor" },
+          ].map((familia) => (
+            <div key={familia.tipo} className={styles.valeFamilia}>
+              <Reveal as="p" className={styles.valeFamiliaTitulo}>
+                {familia.titulo}
+              </Reveal>
+
+              <div className={styles.valeGrid}>
+                {voucherOptions
+                  .filter((opcao) => opcao.tipo === familia.tipo)
+                  .map((opcao, i) => (
+                    <Reveal
+                      as="article"
+                      key={opcao.id}
+                      delay={(i % 3) * 70}
+                      className={styles.valeCard}
+                    >
+                      <h3 className={styles.valeCardTitulo}>{opcao.titulo}</h3>
+                      <p className={styles.valeCardTexto}>{opcao.descricao}</p>
+                      <a
+                        href={buildWhatsAppLink(opcao.mensagemWhats)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.valeCardLink}
+                        aria-label={`Presentear com vale-presente: ${opcao.titulo}`}
+                      >
+                        Presentear →
+                      </a>
+                    </Reveal>
+                  ))}
+              </div>
+            </div>
+          ))}
+
+          <Reveal as="div" className={styles.valeComoFunciona}>
+            <h3>Como funciona</h3>
+            <ol className={styles.valePassos}>
+              {voucherSteps.map((passo, i) => (
+                <li key={passo}>
+                  <span className={styles.valePassoNumero}>{i + 1}</span>
+                  <span>{passo}</span>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+
+          <p className={styles.valeLegal}>
+            Vale válido por {VOUCHER_VALIDADE_MESES} meses a partir da emissão.
+            Não é reembolsável em dinheiro.
+          </p>
         </div>
       </section>
 
